@@ -1,0 +1,1 @@
+java -jar target/dummy-service-0.1.0.jar
