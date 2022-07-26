@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "65fb6f3b-aadf-411f-bf57-4b373c7e1bdf",
+		"_postman_id": "e8d85b7d-98e4-4b10-99fe-f56c5c375d7b",
 		"name": "WELCOME - Populate LAR",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -179,6 +179,46 @@
 				"body": {
 					"mode": "raw",
 					"raw": "@prefix : <http://www.semanticweb.org/welcome#> .\r\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\r\n@prefix ajan: <http://www.ajan.de/ajan-ns#> .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent1> ajan:agentId \"majanAgent1\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent1\" ;\r\n\t:hasStatus :in_coordination ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent2> ajan:agentId \"majanAgent2\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent2\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent3> ajan:agentId \"majanAgent3\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent3\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent4> ajan:agentId \"majanAgent4\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent4\" ;\r\n\t:hasStatus :in_coordination ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent5> ajan:agentId \"majanAgent5\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent5\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent6> ajan:agentId \"majanAgent6\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent6\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent7> ajan:agentId \"majanAgent7\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent7\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent8> ajan:agentId \"majanAgent8\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent8\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent9> ajan:agentId \"majanAgent9\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent9\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent10> ajan:agentId \"majanAgent10\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent10\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{port}}/welcome/integration/coordination/ajan/agents/{{agentId}}?capability=populateLAR",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"welcome",
+						"integration",
+						"coordination",
+						"ajan",
+						"agents",
+						"{{agentId}}"
+					],
+					"query": [
+						{
+							"key": "capability",
+							"value": "populateLAR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PopulateLar-5majanAgents",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/turtle",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "@prefix : <http://www.semanticweb.org/welcome#> .\r\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\r\n@prefix ajan: <http://www.ajan.de/ajan-ns#> .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent1> ajan:agentId \"majanAgent1\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent1\" ;\r\n\t:hasStatus :in_coordination ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent2> ajan:agentId \"majanAgent2\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent2\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent3> ajan:agentId \"majanAgent3\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent3\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent4> ajan:agentId \"majanAgent4\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent4\" ;\r\n\t:hasStatus :in_coordination ;\r\n\trdf:type ajan:Agent .\r\n\r\n<http://localhost:8080/welcome/integration/coordination/ajan/agents/majanAgent5> ajan:agentId \"majanAgent5\" ;\r\n\t:hasAddress\t\"http://localhost:8060/welcome/integration/coordination/ajan/agents/majanAgent5\" ;\r\n\t:hasStatus :active ;\r\n\trdf:type ajan:Agent ."
 				},
 				"url": {
 					"raw": "http://{{ip}}:{{port}}/welcome/integration/coordination/ajan/agents/{{agentId}}?capability=populateLAR",
